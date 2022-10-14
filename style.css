@@ -1,0 +1,136 @@
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.exercices-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.green {
+  background-color: greenyellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+#exercice1 {
+  width: 250px;
+  height: 250px;
+  background-color: rgb(203, 155, 52);
+}
+#exercice1 #button1 {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+#exercice1 #button1:hover {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.76);
+}
+
+#exercice2 {
+  width: 400px;
+  height: 250px;
+  background-color: rgb(47, 147, 47);
+}
+
+.circle-wrapper {
+  width: 300px;
+  justify-content: space-around;
+}
+.circle-wrapper input[type=radio] {
+  display: none;
+}
+.circle-wrapper label {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-weight: 700;
+  color: white;
+  transition: background-color 0.8s;
+}
+.circle-wrapper label:hover {
+  background-color: rgba(187, 187, 187, 0.46);
+}
+.circle-wrapper input[type=radio]:checked ~ label {
+  color: rgb(47, 147, 47);
+  background-color: rgb(255, 255, 255);
+}
+
+#exercice3 label {
+  width: 100px;
+  height: 80px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#exercice3 .burger-bar {
+  width: 100px;
+  height: 20px;
+  background-color: blue;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  transition-duration: 0.2s;
+  border-radius: 10px;
+}
+#exercice3 input[type=checkbox] {
+  display: none;
+}
+#exercice3 input[type=checkbox]:checked ~ label > #burger1 {
+  transform: translate(0, 30px) rotate(405deg);
+}
+#exercice3 input[type=checkbox]:checked ~ label > #burger2 {
+  display: none;
+}
+#exercice3 input[type=checkbox]:checked ~ label > #burger3 {
+  transform: translate(0, -30px) rotate(-405deg);
+}
+
+#vertical-bar__wrapper {
+  width: 200px;
+  height: 200px;
+}
+
+.vertical-bar {
+  width: 50px;
+  height: 200px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.5s;
+}
+
+.vertical-bar:hover {
+  width: 150%;
+}
+
+#exercice5 {
+  width: 200px;
+  height: 100%;
+  padding: 10px;
+  background-color: palevioletred;
+}
+#exercice5 .info {
+  background-color: rgb(29, 155, 157);
+}
+#exercice5 .info-modal {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: 10px;
+  background-color: rgb(29, 155, 157);
+  transition: opacity 1s;
+}
+#exercice5 .info:hover ~ .info-modal {
+  visibility: visible;
+  opacity: 1;
+}/*# sourceMappingURL=style.css.map */

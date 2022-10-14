@@ -1,0 +1,161 @@
+.material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+@mixin setSize($width, $height) {
+    width: $width;
+    height: $height
+}
+
+.exercice {
+    margin: 50px;
+}
+
+//_________________ EXERCICE 6
+
+.exo6 {
+    div {
+        @include setSize(200px, 200px);
+        background-color: green;
+        animation-name: change-color;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes change-color {
+        from {
+           background-color: green;
+        }
+        50% {
+            background-color: red;
+        }
+        to {
+            background-color: blue;
+        }
+    }
+}
+
+//_________________ EXERCICE 7
+
+.exo7 {
+    @include setSize(1000px, 500px);
+    background-color: aquamarine;
+
+    .sun {
+        @include setSize(75px, 75px);
+        background-color: yellow;
+        border-radius: 50%;
+        animation-duration: 50s;
+        animation-name: move-right;
+    }
+
+    .cloud {
+        color: white;
+        animation: 50s move-left;
+    }
+
+    #cloud1 {
+        transform: scale(2, 2) translateX(180px);
+    }
+
+    #cloud2 {
+        transform: scale(2, 2) translate(80px, 20px);
+    }
+
+    #cloud3 {
+        transform: scale(2, 2) translateX(120px);
+    }
+
+    @keyframes move-right {
+        to {
+            transform: translateX(100px);
+        }
+    }
+
+    @keyframes move-left {
+        to {
+            transform: scale(2, 2) translateX(-100px);
+        }
+    }
+}
+
+//_________________ EXERCICE 8
+
+.exo8 {
+    #fullstack {
+        position: absolute;
+        animation-name: change-word;
+        animation-duration: 5s;
+    }
+
+    #developper {
+        visibility: hidden;
+        position: absolute;
+        animation-name: change-word;
+        animation-duration: 5s;
+    }
+
+    #frontend {
+        display: none;
+    }
+
+    @keyframes change-word {
+        to {
+            // transform: translateX(100px);
+            display: inline;
+        }
+    }
+}
+
+//_________________ EXERCICE 9
+
+.exo9 {
+    @include setSize(400px, 60px);
+    align-items: center;
+    background-color: purple;
+}
+
+.left-right {
+    @include setSize(50px, 50px);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    animation: 2s to-left infinite alternate;
+}
+
+@keyframes to-left {
+    from {
+        transform: translateX(325px);
+    }
+    to {
+        transform: translate(25px);
+    }
+}
+
+//_________________ EXERCICE 10
+
+.exo10 {
+    @include setSize(400px, 60px);
+    align-items: center;
+    background-color: purple;
+}
+
+.right-left {
+    @include setSize(50px, 50px);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    animation: 2s right-left infinite alternate;
+}
+
+@keyframes right-left {
+    from {
+        transform: translateX(25px);
+    }
+    to {
+        transform: translate(325px);
+    }
+}

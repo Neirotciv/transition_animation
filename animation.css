@@ -1,0 +1,189 @@
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.exercice {
+  margin: 50px;
+}
+
+.exo6 div {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  -webkit-animation-name: change-color;
+          animation-name: change-color;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes change-color {
+  from {
+    background-color: green;
+  }
+  50% {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+@keyframes change-color {
+  from {
+    background-color: green;
+  }
+  50% {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+.exo7 {
+  width: 1000px;
+  height: 500px;
+  background-color: aquamarine;
+}
+.exo7 .sun {
+  width: 75px;
+  height: 75px;
+  background-color: yellow;
+  border-radius: 50%;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
+  -webkit-animation-name: move-right;
+          animation-name: move-right;
+}
+.exo7 .cloud {
+  color: white;
+  -webkit-animation: 50s move-left;
+          animation: 50s move-left;
+}
+.exo7 #cloud1 {
+  transform: scale(2, 2) translateX(180px);
+}
+.exo7 #cloud2 {
+  transform: scale(2, 2) translate(80px, 20px);
+}
+.exo7 #cloud3 {
+  transform: scale(2, 2) translateX(120px);
+}
+@-webkit-keyframes move-right {
+  to {
+    transform: translateX(100px);
+  }
+}
+@keyframes move-right {
+  to {
+    transform: translateX(100px);
+  }
+}
+@-webkit-keyframes move-left {
+  to {
+    transform: scale(2, 2) translateX(-100px);
+  }
+}
+@keyframes move-left {
+  to {
+    transform: scale(2, 2) translateX(-100px);
+  }
+}
+
+.exo8 #fullstack {
+  position: absolute;
+  -webkit-animation-name: change-word;
+          animation-name: change-word;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+.exo8 #developper {
+  visibility: hidden;
+  position: absolute;
+  -webkit-animation-name: change-word;
+          animation-name: change-word;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+.exo8 #frontend {
+  display: none;
+}
+@-webkit-keyframes change-word {
+  to {
+    display: inline;
+  }
+}
+@keyframes change-word {
+  to {
+    display: inline;
+  }
+}
+
+.exo9 {
+  width: 400px;
+  height: 60px;
+  align-items: center;
+  background-color: purple;
+}
+
+.left-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  -webkit-animation: 2s to-left infinite alternate;
+          animation: 2s to-left infinite alternate;
+}
+
+@-webkit-keyframes to-left {
+  from {
+    transform: translateX(325px);
+  }
+  to {
+    transform: translate(25px);
+  }
+}
+
+@keyframes to-left {
+  from {
+    transform: translateX(325px);
+  }
+  to {
+    transform: translate(25px);
+  }
+}
+.exo10 {
+  width: 400px;
+  height: 60px;
+  align-items: center;
+  background-color: purple;
+}
+
+.right-left {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  -webkit-animation: 2s right-left infinite alternate;
+          animation: 2s right-left infinite alternate;
+}
+
+@-webkit-keyframes right-left {
+  from {
+    transform: translateX(25px);
+  }
+  to {
+    transform: translate(325px);
+  }
+}
+
+@keyframes right-left {
+  from {
+    transform: translateX(25px);
+  }
+  to {
+    transform: translate(325px);
+  }
+}/*# sourceMappingURL=animation.css.map */
